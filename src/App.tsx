@@ -2,7 +2,8 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import {Column} from './Column'
 import {Card} from './Card'
-import {AppContainer} from './styled'
+import {AddItemButton, AppContainer} from './styled'
+import { AddNewItem } from './AddNewItem';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Column text="Done">
 	<Card text="Generate app scaffold" />
       </Column>
+      <AddNewItem toggleButtonText='+ Add another list' onAdd={console.log} />
     </AppContainer>
   )
 }
